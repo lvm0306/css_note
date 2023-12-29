@@ -1,0 +1,86 @@
+css 教程
+
+## 什么是CSS
+CSS (Cascading Style Sheets，层叠样式表），是一种用来为结构化文档（如 HTML 文档或 XML 应用）添加样式（字体、间距和颜色等）的计算机语言，CSS 文件扩展名为 .css。
+
+- CSS 指层叠样式表 (Cascading Style Sheets)
+- 样式定义如何显示 HTML 元素
+- 样式通常存储在样式表中
+- 把样式添加到 HTML 4.0 中，是为了解决内容与表现分离的问题
+- 外部样式表可以极大提高工作效率
+- 外部样式表通常存储在 CSS 文件中
+- 多个样式定义可层叠为一个
+
+## 开始学习
+
+### 一个简单的例子
+
+```
+h1 {color:blue;font-size:12px;}
+/* h1 的注释 */
+```
+
+### 选择器
+#### id选择器
+使用方式：#号+选择名字,html中通过 id使用，id选择器具有唯一性，注意不要数字开头,数字开头的id选择器 会被某些浏览器不识别
+
+```
+<style>
+#idselector{
+text-align:center;
+color:red;
+}
+</style>
+<p id="idselector">Hello World!</p>
+```
+
+
+#### class 选择器
+使用方式：.+选择器名字,注意类名字一样不可以用数字开头
+
+```
+<style>
+.center { text-align:center; }
+
+.color { color:#ff0000;font-size:22px;}
+</style>
+
+<p class="center">text t</p>
+<p class="color">text t</p>
+```
+
+### css 的三种创建方式
+
+#### 外部样式表
+通过link 标签的引用,可以吧css 放在统一的目录下，使用与很多页面使用一个css
+```
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+```
+注意：不要在属性值与单位之间留有空格（如："margin-left: 20 px" ），正确的写法是 "margin-left: 20px" 
+
+#### 内部样式表
+在<style></style>标签内 写样式，单独给一个html使用
+
+```
+<head>
+<style>
+hr {color:sienna;}
+p {margin-left:20px;}
+body {background-image:url("images/back40.gif");}
+</style>
+</head>
+```
+
+#### 内联样式
+将样式与 html 混合一起,适用与 某一个元素单独配置样式
+
+```
+<p style="color:sienna;margin-left:20px">这是一个段落。</p>
+```
+
+#### 三种样式的优先级
+
+内联样式 > 内部样式 > 外部样式 > 浏览器默认样式
+
